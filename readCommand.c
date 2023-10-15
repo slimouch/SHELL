@@ -21,7 +21,7 @@ void readCommand(const char *programName)
 		{
 			if (NbCh == -1)
 			{
-				if (NbCH == EOF)
+				if (NbCh == EOF)
 					break;
 				perror("getline error");
 				free(bf);

@@ -27,5 +27,5 @@ void *myRealloc(void *p, size_t old, size_t n)
 	while (Size--)
 		tmp[Size] = ((char *)p)[Size];
 	free(p);
-	return (t);
+	return (tmp);
 }

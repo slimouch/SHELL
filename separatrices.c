@@ -25,7 +25,7 @@ char **separatrices(char *s)
 		if (NewTok[i] == NULL)
 		{
 			perror("malloc error");
-			freetok(NewTok);
+			freeTok(NewTok);
 			exit(EXIT_FAILURE);
 		}
 		mystrCpy(NewTok[i], token);
