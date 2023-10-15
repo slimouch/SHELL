@@ -7,6 +7,7 @@
 size_t myStrlen(char *str)
 {
 	size_t l = 0;
+
 	while (str[l] != '\0')
 		l++;
 	return (l);
