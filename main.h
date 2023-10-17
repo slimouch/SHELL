@@ -4,9 +4,11 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 #include <sys/wait.h>
+#include <errno.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <sys/stat.h>
 void *myRealloc(void *p, size_t old, size_t n);
 char **separatrices(char *s);
 void readCommand(const char *programName);

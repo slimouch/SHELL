@@ -21,8 +21,11 @@ void readCommand(const char *programName)
 		{
 			if (NbCh == -1)
 			{
-				if (NbCh == EOF)
+				if (NbCh == EOF && isatty(STDIN_FILENO))
+				{
+					write(1, "\n", 1);
 					break;
+				}
 				perror("getline error");
 				free(bf);
 				freeTok(argC);
@@ -41,7 +44,6 @@ void readCommand(const char *programName)
 		else
 			forkAndExecute(argC, programName);
 		freeTok(argC);
-		write(1, "\n", 1);
 	}
 	free(bf);
 	bf = NULL;
